@@ -83,4 +83,8 @@ public struct fortnite_api {
         return query.data
     }
     
+    public static func getAes(xapikey: String) -> (Data){
+        let query: (data: Data, address: URLResponse?) = fnapi_get(endpoint: "aes", xapikey: "\(xapikey)")
+        return query.data
+    }
 }
